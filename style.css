@@ -1,3 +1,12 @@
+body{
+  background: linear-gradient(
+    to left,
+    #3c4043 0%,
+    #3c4043 50%,
+    #ffc107 50%,
+    #ffc107 100%
+  );
+}
 #div_app_full{
 	border: 1px solid black;
 	margin: auto;
@@ -25,8 +34,4 @@ margin: auto;
 }
 #preload{
 	background: url(img/mole.png) no-repeat -9999px -9999px;
-}
-#div_app{
-
-
 }

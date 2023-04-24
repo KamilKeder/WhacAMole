@@ -1,65 +1,113 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Whac A Mole</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-</head>
-<body>
-<div id="div_app_full" class="card">
-	<div class="card-header">
-			<p class="mb-0">Whac a mole</p>
-	</div>
-	<div class="card-body">
-	<div id="div_app">
-		<div id="div_wynik">Najlepszy Wynik: <span id="span_najlepszy">0</span></div>
-		<div id="div_wynik">Wynik: <span id="span_wynik">0</span></div>
-		<div id="div_czas">Czas: <span id="span_czas">0.00</span></div>
-		<div id="div_grid" class="mt-2">
-			<div class="div_pole" id="1"></div>
-			<div class="div_pole" id="2"></div>
-			<div class="div_pole" id="3"></div>
-			<div class="div_pole" id="4"></div>
-			<div class="div_pole" id="5"></div>
-			<div class="div_pole" id="6"></div>
-			<div class="div_pole" id="7"></div>
-			<div class="div_pole" id="8"></div>
-			<div class="div_pole" id="9"></div>
-			
-		</div>
-	</div>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Whac A Mole</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="apple-touch-icon" sizes="76x76" href="src/whacamole.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="src/whacamole.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="src/whacamole.png" />
+    <link rel="manifest" href="src/whacamole.png" />
+    <link rel="mask-icon" href="src/whacamole.png" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+  </head>
+  <body>
+    <div id="div_app_full" class="card">
+      <div class="card-header">
+        <p class="mb-0">Whac a mole</p>
+      </div>
+      <div class="card-body">
+        <div id="div_app">
+          <div id="div_wynik">
+            Najlepszy Wynik: <span id="span_najlepszy">0</span>
+          </div>
+          <div id="div_wynik">Wynik: <span id="span_wynik">0</span></div>
+          <div id="div_czas">Czas: <span id="span_czas">0.00</span></div>
+          <div id="div_grid" class="mt-2">
+            <div class="div_pole" id="1"></div>
+            <div class="div_pole" id="2"></div>
+            <div class="div_pole" id="3"></div>
+            <div class="div_pole" id="4"></div>
+            <div class="div_pole" id="5"></div>
+            <div class="div_pole" id="6"></div>
+            <div class="div_pole" id="7"></div>
+            <div class="div_pole" id="8"></div>
+            <div class="div_pole" id="9"></div>
+          </div>
+        </div>
 
-	<button id="button_start" class="btn mt-3 mb-0 btn-success">Start</button>
-	</div>
-	<div class="card-footer">
-		<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#info">Informacje o aplikacji</button>
-		
-	</div>	
-</div>
+        <button id="button_start" class="btn mt-3 mb-0 btn-success">
+          Start
+        </button>
+      </div>
+      <div class="card-footer">
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#info"
+        >
+          Informacje o aplikacji
+        </button>
+      </div>
+    </div>
 
-<div class="modal fade" id="info" tabindex="-1" aria-labelledby="infoinfo" aria-hidden="true">
-	<div class="modal-dialog">
-	  <div class="modal-content">
-		<div class="modal-header">
-		  <h1 class="modal-title fs-5" id="infoinfo">Informacje o aplikacji</h1>
-		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-		</div>
-		<div class="modal-body">
-		  <h5 class="mb-2">O aplikacji</h5>
-			Aplikacja wyświetla pole 3x3 a nastepnie losowo umieszcza na nim kreta. Po kliknięciu na kreta, aplikacja losuje nowe miejsce z kretem i tam go umieszcza. Zadaniem użytkownika jest klikać w wyświetlające się krety jak najszybciej. Za każde kliknięcie użytkownik dostaje dodatkowe 0.5sekundy czasu oraz 1 punkt, po upłynięciu czasu gra się konczy i zapisany zostaje wynik.
-			<h5 class="mt-2">Technologie</h5>
-			HTML, CSS, JavaScript, Bootstrap
-		</div>
-		<div class="modal-footer">
-		  <button type="button" class="btn btn-success" data-bs-dismiss="modal">Zamknij</button>
-		</div>
-	  </div>
-	</div>
-  </div>
-<script type="text/javascript" src="script.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<img id="preload">
-</body>
+    <div
+      class="modal fade"
+      id="info"
+      tabindex="-1"
+      aria-labelledby="infoinfo"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="infoinfo">
+              Informacje o aplikacji
+            </h1>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h5 class="mb-2">O aplikacji</h5>
+            Aplikacja polega na szybkim klikaniu losowo umieszczanego kreta na
+            planszy 3x3. Celem gry jest zdobycie jak największej liczby punktów
+            poprzez jak najszybsze reagowanie na pojawienie się kreta. Za każde
+            kliknięcie użytkownik otrzymuje dodatkowe 0.5 sekundy czasu oraz 1
+            punkt, a po upłynięciu czasu wynik zostaje zapisany.
+            <h5 class="mt-2">Technologie</h5>
+            HTML, CSS, JavaScript, Bootstrap
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              data-bs-dismiss="modal"
+            >
+              Zamknij
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <img id="preload" />
+  </body>
 </html>
